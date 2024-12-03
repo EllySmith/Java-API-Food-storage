@@ -31,4 +31,17 @@ public class FoodItemController {
         response.put("body", "Hello!");
         return response;
     }
+
+    @PostMapping("/")
+    public Map<String, String> addItem(@RequestBody FoodItem item) {
+        foodItemRepository.save(item);
+        Map<String, String> response = new HashMap<>();
+        response.put("body", "Item added: " + item.getName());
+        return response;
+    }
+
+    @GetMapping("/")
+    public List<FoodItem> getAllFoodItems() {
+        return foodItemRepository.findAll();
+    }
 }

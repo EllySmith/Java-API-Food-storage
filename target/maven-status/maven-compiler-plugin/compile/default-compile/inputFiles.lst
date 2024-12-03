@@ -3,7 +3,6 @@
 /Users/ellysmith/hexlet-js/foodmanagement/src/main/java/com/example/foodmanagement/FoodmanagementApplication.java
 /Users/ellysmith/hexlet-js/foodmanagement/src/main/java/com/example/foodmanagement/controller/UserController.java
 /Users/ellysmith/hexlet-js/foodmanagement/src/main/java/com/example/foodmanagement/model/User.java
-/Users/ellysmith/hexlet-js/foodmanagement/src/main/java/com/example/foodmanagement/config/SQLiteDialect.java
 /Users/ellysmith/hexlet-js/foodmanagement/src/main/java/com/example/foodmanagement/DatabaseConnection.java
 /Users/ellysmith/hexlet-js/foodmanagement/src/main/java/com/example/foodmanagement/repository/FoodItemRepository.java
 /Users/ellysmith/hexlet-js/foodmanagement/src/main/java/com/example/foodmanagement/repository/UserRepository.java
