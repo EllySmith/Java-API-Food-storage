@@ -24,14 +24,7 @@ public class FoodItemController {
         existingFoodItem.setName(updatedFoodItem.getName());
         return foodItemRepository.save(existingFoodItem);
     }
-
-    @PostMapping("/hello")
-    public Map<String, String> hello() {
-        Map<String, String> response = new HashMap<>();
-        response.put("body", "Hello!");
-        return response;
-    }
-
+    
     @PostMapping("/")
     public Map<String, String> addItem(@RequestBody FoodItem item) {
         foodItemRepository.save(item);
