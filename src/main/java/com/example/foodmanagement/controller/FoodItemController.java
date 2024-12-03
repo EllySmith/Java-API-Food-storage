@@ -44,4 +44,13 @@ public class FoodItemController {
     public List<FoodItem> getAllFoodItems() {
         return foodItemRepository.findAll();
     }
+
+    @GetMapping("/tag")
+    public List<FoodItem> getAllFoodItems(@RequestParam(required = false) String tag) {
+        if (tag != null && !tag.isEmpty()) {
+            return foodItemRepository.findByTag(tag);
+        } else {
+            return foodItemRepository.findAll();
+        }
+    }
 }

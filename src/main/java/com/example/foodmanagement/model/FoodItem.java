@@ -19,7 +19,7 @@ public class FoodItem {
     private String name;
     private String category;
 
-    @ElementCollection(fetch = FetchType.LAZY)
+    @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "food_item_tags", joinColumns = @javax.persistence.JoinColumn(name = "food_item_id"))
     @Column(name = "tag")
     private List<String> tags;
