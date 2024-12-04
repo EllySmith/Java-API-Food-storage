@@ -1,6 +1,8 @@
 package com.example.foodmanagement.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ElementCollection;
 import javax.persistence.CollectionTable;
@@ -12,9 +14,10 @@ import java.util.List;
 public class Recipe {
 
     @Id
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    private String name; 
+    private String name;
 
     @ElementCollection
     @CollectionTable(name = "recipe_ingredients", joinColumns = @JoinColumn(name = "recipe_id"))
@@ -26,26 +29,29 @@ public class Recipe {
     @Column(name = "tag")
     private List<String> tags;
 
-    public Recipe(int id, String name, List<String> ingredients, List<String> tags) {
+    public Recipe() {
+    }
+
+    public Recipe(Long id, String name, List<String> ingredients, List<String> tags) {
         this.id = id;
-        this.username = name;
+        this.name = name;
         this.ingredients = ingredients;
         this.tags = tags;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getUsername() {
+    public String getName() {
         return name;
     }
 
-    public void setUsername(String username) {
+    public void setName(String name) {
         this.name = name;
     }
 
