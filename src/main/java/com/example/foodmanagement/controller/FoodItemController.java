@@ -24,7 +24,7 @@ public class FoodItemController {
         existingFoodItem.setName(updatedFoodItem.getName());
         return foodItemRepository.save(existingFoodItem);
     }
-    
+
     @PostMapping("/")
     public Map<String, String> addItem(@RequestBody FoodItem item) {
         foodItemRepository.save(item);
@@ -39,7 +39,7 @@ public class FoodItemController {
     }
 
     @GetMapping("/tag")
-    public List<FoodItem> getAllFoodItems(@RequestParam(required = false) String tag) {
+    public List<FoodItem> getAllFoodItems(@RequestParam(required = true) String tag) {
         if (tag != null && !tag.isEmpty()) {
             return foodItemRepository.findByTag(tag);
         } else {

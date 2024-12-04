@@ -5,4 +5,6 @@ com/example/foodmanagement/repository/FoodItemRepository.class
 com/example/foodmanagement/repository/UserRepository.class
 com/example/foodmanagement/controller/FoodItemController.class
 com/example/foodmanagement/controller/UserController.class
+com/example/foodmanagement/ServerPortLogger.class
+com/example/foodmanagement/model/Recipe.class
 com/example/foodmanagement/DatabaseConnection.class

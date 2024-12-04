@@ -12,6 +12,7 @@ public class DatabaseConnection {
 
     public static Connection getConnection() {
         Connection connection = null;
+
         try {
             connection = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
             System.out.println("Connected to MySQL database successfully.");
